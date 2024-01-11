@@ -14,6 +14,8 @@ header {
 
 section {
     padding: 20px;
+    text-align: center;
+    font-size: 2em; /* Makes the font size twice as large */
 }
 
 footer {
