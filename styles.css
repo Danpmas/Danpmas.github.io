@@ -7,9 +7,19 @@ body {
 }
 
 header {
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Vertically center items in the header */
     background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     text-align: center;
+}
+
+.profile-pic {
+    max-width: 60px; /* Adjust the size as needed */
+    margin-right: 20px; /* Space between the image and the header text */
+}
+
+header div {
     font-size: 2em;
 }
 
@@ -44,6 +54,7 @@ footer {
     background: rgba(0, 0, 0, 0.5);
     text-align: center;
     padding: 10px;
+    font-size: 1em;
 }
 
 footer a {
