@@ -12,11 +12,13 @@ header {
     background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     text-align: center;
+    font-size: 25px;
 }
 
 .p {
     background: rgba(0, 0, 0, 0.5);
     text-align: center;
+    font-size: 15px;
 }
 
 .profile-pic {
