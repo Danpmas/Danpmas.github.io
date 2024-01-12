@@ -15,7 +15,7 @@ header {
 }
 
 .profile-pic {
-    max-width: 60px; /* Adjust the size as needed */
+    max-width: 130px; /* Adjust the size as needed */
     margin-right: 20px; /* Space between the image and the header text */
 }
 
