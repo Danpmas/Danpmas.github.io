@@ -8,6 +8,7 @@ body {
 
 header {
     display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Vertically center items in the header */
     background: rgba(0, 0, 0, 0.5);
     padding: 20px;
@@ -15,14 +16,16 @@ header {
     font-size: 25px;
 }
 
-.p {
+/* Targeting all <p> elements */
+p {
     background: rgba(0, 0, 0, 0.5);
     text-align: center;
     font-size: 15px;
+    margin: 10px 0; /* Adjust spacing around the paragraph */
 }
 
 .profile-pic {
-    max-width: 800px; /* Adjust the size as needed */
+    max-width: 730px; /* Adjust the size as needed */
     margin-right: 20px; /* Space between the image and the header text */
 }
 
