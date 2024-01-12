@@ -24,9 +24,25 @@ p {
     margin: 10px 0; /* Adjust spacing around the paragraph */
 }
 
+.profile-container {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: start; /* Aligns items to the start of the container */
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column; /* Stack text elements vertically */
+    align-items: start; /* Aligns text to the start */
+    text-align: left; /* Aligns text to the left */
+    margin-left: 20px; /* Space between the image and the text */
+}
+
 .profile-pic {
-    max-width: 730px; /* Adjust the size as needed */
-    margin-right: 20px; /* Space between the image and the header text */
+    max-width: 730px;
+    margin-right: 20px;
 }
 
 header div {
