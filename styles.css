@@ -10,12 +10,31 @@ header {
     background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     text-align: center;
+    font-size: 2em;
 }
 
 section {
     padding: 20px;
     text-align: center;
-    font-size: 2em; /* Makes the font size twice as large */
+    font-size: 2em;
+}
+
+.image-description-container {
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    margin-top: 20px; /* Adds some space above the container */
+}
+
+.profile-image {
+    max-width: 50%; /* Adjust as needed */
+    margin-right: 20px; /* Space between image and description */
+}
+
+.image-description {
+    max-width: 40%; /* Adjust as needed */
+    text-align: left; /* Aligns the text to the left */
+    font-size: 1em; /* Resets font size for the description */
 }
 
 footer {
@@ -25,7 +44,6 @@ footer {
     background: rgba(0, 0, 0, 0.5);
     text-align: center;
     padding: 10px;
-    font-size: 1.5em;
 }
 
 body::before {
