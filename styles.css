@@ -13,13 +13,6 @@ header {
     font-size: 2em;
 }
 
-.miniheader {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    text-align: center;
-    font-size: 1.5em; 
-}
-
 section {
     padding: 20px;
     text-align: center;
@@ -27,21 +20,21 @@ section {
 }
 
 .image-description-container {
-    display: flex; /* Enables flexbox layout */
-    justify-content: center; /* Horizontally center the content */
-    align-items: center; /* Vertically center the content */
-    margin-top: 30px; /* Adds some space above the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .profile-image {
-    max-width: 35%; /* Adjust as needed */
-    margin-right: 10px; /* Space between image and description */
+    max-width: 50%;
+    margin-right: 20px;
 }
 
 .image-description {
-    max-width: 40%; /* Adjust as needed */
-    text-align: left; /* Aligns the text to the left */
-    font-size: 1em; /* Resets font size for the description */
+    max-width: 40%;
+    text-align: left;
+    font-size: 1em;
 }
 
 footer {
@@ -51,6 +44,10 @@ footer {
     background: rgba(0, 0, 0, 0.5);
     text-align: center;
     padding: 10px;
+}
+
+footer a {
+    color: #c679f7; /* Light purple color for links */
 }
 
 body::before {
