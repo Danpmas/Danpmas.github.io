@@ -1,37 +1,101 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Daniel Maslowski</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
+<script src="json.js"></script>  
+    <head>
+        <title>Daniel Maslowski</title>
+            <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
 <body>
-    <div class="profile-container">
-        <img src="profile.jpeg" alt="Daniel Maslowski" class="profile-pic">
-        <div class="text-container">
-            <h1>Daniel Maslowski <br> Computer Science Major, Atmospheric Scientist</h1>
-            <p1>Welcome to my website! As I seek internship opportunities, I am excited about the prospect of contributing to 
-                and learning from real-world tech scenarios. I am particularly interested in roles that allow me to 
-                develop innovative software solutions, delve into AI and machine learning algorithms, contribute to large-scale data analysis,
-                and build robust security systems. With a commitment to continuous learning and a keen eye for detail, I am ready to take 
-                on challenges and add value to any team.
-            </p1>
+    <div id="parallax-section1" class="parallax">
+        <div class="content"> <!-- Your main content here --> 
+            <div class="profile-container">
+                <img src="profile.jpeg" alt="Daniel Maslowski" class="profile-pic">
+                    <div class="text-container">
+                        <h3>
+                        <span class="line1">Daniel Maslowski</span> <br>
+                        <span class="line2">Computer Science Major</span> <br>
+                        <span class="line3">Atmospheric Scientist</span>
+                        </h3>
+                        <p1>Welcome to my website! As I seek internship opportunities, I am excited about the prospect of contributing to 
+                        and learning from real-world tech scenarios. I am particularly interested in roles that allow me to 
+                        develop innovative software solutions, delve into AI and machine learning algorithms, contribute to large-scale data analysis,
+                        and build robust security systems. With a commitment to continuous learning and a keen eye for detail, I am ready to take 
+                        on challenges and add value to any team.
+                        </p1>
+                    </div>
+            </div>
         </div>
     </div>
     <section>
         <miniheader>
             <h1>Projects and Achievements</h1>
         </miniheader>
-        <!-- Image and Description Section -->
+        <p2>In respect for my professors and future students who will be completing similar projects, I have made all source code to these projects private to eliminate unfair
+            advantages. I shall provide code upon request.<br><br><br><br><br><br><br>
+        </p2>
+        <div id="parallax-section2" class="parallax">
+            <br><br>
+<div class="content"> <!-- More content here --> 
+    <div class="image-description-container">
+        <h2>Dijsktra's Algorithm for Wikipedia Pages</h2>
+        <video width="1950" height="570" controls>
+            <source src="p3.mp4" type="video/mp4">
+            <source src="p3.ogg" type="video/ogg">
+            <source src="p3.mov" type="video/mov">
+            Your browser does not support the video tag.
+        </video>
+            <p>Data Structures and Algorithms Course project in the langauge <i>Java</i> to create a weighted, directed graph of over 1000 websites with a similarity metric 
+                as the cost. Djikstra's algorithm is applied to find the shortest path between websites.
+            </p>
+    </div>
+            <!-- New Image and Description -->
         <div class="image-description-container">
-            <img src="P3.png" alt="Description of Image" class="profile-image">
-            <div class="image-description">
-                <p>This project involves creating a weighted graph of websites and persistently stored the edges in a text file. I then used Djikstra's algorithm
-                    to find the shortest path between one website to another, displayed the number of disjoint sets, and the websites
-                    present in each disjoint set.</p>
-            </div>
+            <h2>Turing Machine Simulator</h2>
+            <img src="P4.png" alt="New Image Description" class="profile-image">
+                <div class="image-description">
+                    <p>Programming Languages Course project to implement a one-way, infinite to the right Turing Machine in the language <i>C</i>.
+                        The program runs for any input file which represents a Turing Machine in this format, with any number of states.
+                    </p>
+                </div>
         </div>
+                    <!-- New Image and Description -->
+                    <div class="image-description-container">
+                        <h2>KMeans Clustering of Websites</h2>
+                        <img src="P7.png" alt="New Image Description" class="profile-image">
+                            <div class="image-description">
+                                <p>Data Structures and Algorithms Course project in the langauge <i>Java</i> to sort and persistently store over 200 Wikipedia pages into clusters of 
+                                    similar websites using KMeans clustering.
+                                </p>
+                            </div>
+                    </div>
+        <div class="content"> <!-- More content here --> 
+            <div class="image-description-container">
+                <h2>Caesar Cipher Messaging</h2>
+                <video width="1694" height="844" controls>
+                    <source src="p6.mp4" type="video/mp4">
+                    <source src="p6.ogg" type="video/ogg">
+                    <source src="p6.mov" type="video/mov">
+                    Your browser does not support the video tag.
+                </video>
+                    <p>System's Programming project in the langauge <i>C</i> to create a program that can encode and decode messages, convert numbers to unary form, and 
+                        reverse messages.
+                    </p>
+            </div>
+                <!-- New Image and Description --> 
+                <div class="image-description-container">
+                    <h2>Social Distancing Simulator</h2>
+                      <img src="P5.png" alt="New Image Description" class="profile-image">
+                           <div class="image-description">
+                             <p>Programming Languages Course project in the language <i>Answer Set Programming</i> that creates a "social distancing"
+                                 environment on a two dimensional grid. The program finds a path through the grid while constantly maintaining a 
+                                 6 square distance from preselected points on the grid.
+                                </p>
+                            </div>
+                    </div>
+                </div>
+            </div>
     </section>
-        <p>You can follow me on  
+        <p>I am also on  
             <a href="https://www.linkedin.com/in/daniel-maslowski-5242a1181/" target="_blank">LinkedIn</a>,
             <a href="https://github.com/Danpmas" target="_blank">GitHub</a>, and
             <a href="https://www.instagram.com/danmweatherman/?hl=en" target="_blank">Instagram</a> 

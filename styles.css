@@ -4,30 +4,111 @@ body {
     font-family: Arial, sans-serif;
     background: #0f0f23; /* Dark background for a cosmic theme */
     color: white;
+    background-repeat: no-repeat;
+    background-size: contain; /* Ensures the image covers the whole area */
+    /* Keep the transition property as before */
+    transition: background-image 0.5s ease-in-out;
 }
 
-header {
-    display: flex; /* Enable flexbox */
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Vertically center items in the header */
+.parallax {
+    min-height: 1000px; /* Adjust the height as needed */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#parallax-section1 {
+    background-image: url('cosmic.png');
+}
+
+#parallax-section2 {
+    background-image: url('b2.png');
+}
+
+.content {
+    min-height: 0px; /* Adjust as needed for your content */
+    /* Style your content as desired */
+}
+
+
+miniheader {
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+h1 {
+    font-size: 70px;
+    margin-top: 200px; /* Added top margin */
+    color: #ffffff;
+}
+
+h2 {
+    margin-top: 180px; /* Added top margin */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+    color: #ffffff;
+}
+
+h3 {
+    margin-top: 60px; /* Added top margin */
+    color: #ffffff;
+    font-size: 65px;
+}
+
+.line1 {
+    color: #e0b9fb; 
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.line2 {
+    color: #c0fcc0; 
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.line3 {
+    color: #bac5fd; 
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+video {
+    width: 100%;
+    max-width: 1100px; /* Maximum size */
+    height: auto; /* Maintain aspect ratio */
+    /* margin-top: 200px; */
+}
+
+bgc {
     background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    text-align: center;
-    font-size: 50px;
 }
 
 /* Targeting all <p> elements */
 p {
-    background: rgba(0, 0, 0, 0.5);
+    /* background: rgba(0, 0, 0, 0.5); */
     text-align: center;
-    font-size: 15px;
+    font-size: 30px;
     margin: 10px 0; /* Adjust spacing around the paragraph */
+    text-shadow: 2px 2px 4px #000000;
 }
 
 p1 {
     text-align: center;
-    font-size: 30px;
+    font-size: 28px;
     margin: 10px 0; /* Adjust spacing around the paragraph */
+    text-shadow: 2px 2px 4px #000000;
+}
+
+p2 {
+    text-align: center;
+    font-size: 25px;
+    margin: 10px 0; /* Adjust spacing around the paragraph */
+    color: #ffffff;
 }
 
 .profile-container {
@@ -46,6 +127,10 @@ p1 {
     margin-left: 20px; /* Space between the image and the text */
 }
 
+.text-container h1 {
+    font-size: 65px;
+}
+
 .profile-pic {
     max-width: 730px;
     margin-right: 20px;
@@ -62,38 +147,30 @@ section {
 }
 
 .image-description-container {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
-    margin-top: 15px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .profile-image {
-    max-width: 50%;
+    max-width: 80%;
     margin-right: 20px;
+    /* margin-top: 180px; */
 }
 
 .image-description {
-    background: rgba(0, 0, 0, 0.5);
-    max-width: 40%;
-    text-align: left;
+    /* background: rgba(0, 0, 0, 0.5); */
+    max-width: 100%;
+    text-align: center;
     font-size: 1em;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    text-align: center;
-    padding: 10px;
-    font-size: 1.5em;
-}
-
-footer a {
-    color: #c679f7; /* Light purple color for links */
+a {
+    color: #ce86fa; /* Light purple color for links */
 }
 
 body::before {
