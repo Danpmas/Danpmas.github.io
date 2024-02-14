@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
-<script src="json.js"></script>  
+<script>src=script.js</script> 
     <head>
         <title>Daniel Maslowski</title>
             <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
 <body>
+    <div class="navbar">
+        <a href="#Projects">Projects</a>
+        <a href="#Achievements">Achievements</a>
+        <a href="https://www.linkedin.com/in/daniel-maslowski-5242a1181/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Danpmas" target="_blank">GitHub</a>
+    </div>    
     <div id="parallax-section1" class="parallax">
         <div class="content">
             <div class="profile-container">
@@ -18,7 +24,7 @@
                         </h3>
                         <p1>Welcome to my website! As I seek internship opportunities, I am excited about the prospect of contributing to 
                         and learning from real-world tech scenarios. I am particularly interested in roles that allow me to 
-                        develop innovative software solutions, delve into AI and machine learning algorithms, contribute to large-scale data analysis,
+                        delve into AI and machine learning algorithms, contribute to large-scale data analysis,
                         and build robust security systems. With a commitment to continuous learning and a keen eye for detail, I am ready to take 
                         on challenges and add value to any team.
                         </p1>
@@ -26,66 +32,66 @@
             </div>
         </div>
     </div>
-    <section>
+        <section id="Projects">
         <miniheader>
-            <h1>Projects and Achievements</h1>
+            <h1>Projects</h1>
         </miniheader>
-        <p2>In respect for my professors and future students who will be completing similar projects, I have made all source code to these projects private to eliminate unfair
-            advantages. I shall provide code upon request.<br><br><br><br><br><br><br>
-        </p2>
         <div id="parallax-section2" class="parallax">
-            <br><br>
-<div class="content">
-    <div class="image-description-container">
-        <h2>Dijsktra's Algorithm for Wikipedia Pages</h2>
-        <video width="1950" height="570" controls>
-            <source src="p3.mp4" type="video/mp4">
-            <source src="p3.ogg" type="video/ogg">
-            <source src="p3.mov" type="video/mov">
-            Your browser does not support the video tag.
-        </video>
-            <p>Data Structures and Algorithms Course project in the langauge <i>Java</i> to create a weighted, directed graph of over 1000 websites with a similarity metric 
-                as the cost. Djikstra's algorithm is applied to find the shortest path between websites.
-            </p>
-    </div>
-            <!-- New Image and Description -->
+            <br>
+            <div class="content">
+                <a href="https://github.com/Danpmas/Dijkstra-Algorithm-for-Wikipedia-Pages" target="_blank">
+                <div class="image-description-container">
+                    <img src="p3.png" alt="New Image Description" class="profile-image">
+                    <div class="image-description">
+                    <h2>Dijsktra's Algorithm for Wikipedia Pages</h2>
+                        <p>Data Structures and Algorithms Course project in the langauge <i>Java</i> to create a weighted, directed graph of over 1000 websites with a similarity metric 
+                            as the cost. Djikstra's algorithm is applied to find the shortest path between websites.
+                        </p>      
+                    </div>
+                </div>
+            </a>
+            
+            <a href="https://github.com/Danpmas/Turing-Machine-Simulator" target="_blank">
         <div class="image-description-container">
-            <h2>Turing Machine Simulator</h2>
             <img src="p4.png" alt="New Image Description" class="profile-image">
                 <div class="image-description">
+                    <h2>Turing Machine Simulator</h2>
                     <p>Programming Languages Course project to implement a one-way, infinite to the right Turing Machine in the language <i>C</i>.
                         The program runs for any input file which represents a Turing Machine in this format, with any number of states.
                     </p>
                 </div>
         </div>
-                    <!-- New Image and Description -->
+        </a>
+                    
+                    <a href="https://github.com/Danpmas/KMeans-Clustering-of-Wikipedia-Pages" target="_blank">
                     <div class="image-description-container">
-                        <h2>KMeans Clustering of Websites</h2>
                         <img src="p7.png" alt="New Image Description" class="profile-image">
                             <div class="image-description">
+                                <h2>KMeans Clustering of Websites</h2>
                                 <p>Data Structures and Algorithms Course project in the langauge <i>Java</i> to sort and persistently store over 200 Wikipedia pages into clusters of 
                                     similar websites using KMeans clustering.
                                 </p>
                             </div>
                     </div>
+                </a>
         <div class="content">
+            <a href="https://github.com/Danpmas/Caesar-Cipher-Messaging" target="_blank">
             <div class="image-description-container">
+                <img src="p6.png" alt="New Image Description" class="profile-image">
+                <div class="image-description">
                 <h2>Caesar Cipher Messaging</h2>
-                <video width="1694" height="844" controls>
-                    <source src="p6.mp4" type="video/mp4">
-                    <source src="p6.ogg" type="video/ogg">
-                    <source src="p6.mov" type="video/mov">
-                    Your browser does not support the video tag.
-                </video>
                     <p>System's Programming project in the langauge <i>C</i> to create a program that can encode and decode messages, convert numbers to unary form, and 
                         reverse messages.
                     </p>
+                </div>
             </div>
-                <!-- New Image and Description --> 
+        </a>
+                 
+                <a href="https://github.com/Danpmas/Social-Distancing-Simulator" target="_blank">
                 <div class="image-description-container">
-                    <h2>Social Distancing Simulator</h2>
                       <img src="p5.png" alt="New Image Description" class="profile-image">
                            <div class="image-description">
+                            <h2>Social Distancing Simulator</h2>
                              <p>Programming Languages Course project in the language <i>Answer Set Programming</i> that creates a "social distancing"
                                  environment on a two dimensional grid. The program finds a path through the grid while constantly maintaining a 
                                  6 square distance from preselected points on the grid.
@@ -94,10 +100,36 @@
                     </div>
                 </div>
             </div>
+        </a>
     </section>
-        <p>I am also on  
-            <a href="https://www.linkedin.com/in/daniel-maslowski-5242a1181/" target="_blank">LinkedIn</a> and
-            <a href="https://github.com/Danpmas" target="_blank">GitHub</a>
-        </p>
+    <section id="Achievements">
+        <miniheader>
+            <h1>Achievements</h1>
+        </miniheader>
+        <a href="https://www.oswego.edu/news/story/winning-launch-it-idea-will-support-severe-weather-awareness" target="_blank">
+        <div class="image-description-container">
+            <img src="p8.png" alt="New Image Description" class="profile-image">
+            <div class="image-description">
+            <h2>2020 LaunchIt Competition Winner</h2>
+                <p>First place winner for SUNY Oswego's 2020 LaunchIt Business Startup Competition with the pitch for a weather app called SWTRS.
+                    SWTRS is an acronym that stands for Severe Weather Threat Ranking System and provides critical severe weather data for individual users,
+                    users interested in real estate, insurance companies, and commercial markets.
+                </p>
+            </div>
+        </div>
+        <a href="https://www.oswego.edu/news/spotlight/daniel-maslowski" target="_blank">
+            <div class="image-description-container">
+                <img src="p9.png" alt="New Image Description" class="profile-image">
+                <div class="image-description">
+                <h2>SUNY Oswego Spotlight</h2>
+                    <p>In recognition of academic achievements and contributions to the school community, honored in SUNY Oswego's 2021 Spotlight series. 
+                        This feature celebrates students who go above and beyond in their dedication to learning and community engagement.
+                    </p>
+                </div>
+            </div>
+    </a>
+    </section>
+</body>
+</html>
 </body>
 </html>
