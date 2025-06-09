@@ -1,186 +1,508 @@
 <!DOCTYPE html>
-<html>
-<script>src=script.js</script> 
-    <head>
-        <title>Daniel Maslowski</title>
-            <link rel="stylesheet" type="text/css" href="styles.css">
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Daniel Maslowski - Computer Scientist and Atmospheric Scientist seeking job opportunities in IT, data analysis, and quality analytics.">
+    <title>Daniel Maslowski</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #0f0f23;
+            color: white;
+        }
+
+        .parallax {
+            min-height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        #parallax-section1 {
+            background-image: url('b1.png');
+        }
+
+        #parallax-section2 {
+            background-image: url('b2.png');
+        }
+
+        #parallax-section3 {
+            background-image: url('b3.png');
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background-color: rgba(66, 177, 195, 0.7);
+            z-index: 1000;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .navbar a {
+            color: rgb(238, 197, 255);
+            font-weight: bold;
+            text-shadow: 2px 2px 4px #000000;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 32px;
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .navbar a:hover {
+            color: #8bd7d0;
+        }
+
+        .content {
+            padding: 40px 20px;
+        }
+
+        .profile-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 10px;
+            margin: 40px auto;
+            max-width: 1200px;
+        }
+
+        .profile-pic {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 40px;
+        }
+
+        .text-container {
+            flex: 1;
+        }
+
+        .text-container h1 {
+            font-size: 48px;
+            margin: 0 0 20px 0;
+        }
+
+        .line1 {
+            color: #e0b9fb;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        .line2 {
+            color: #c0fcc0;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        .line3 {
+            color: #bac5fd;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        .intro-text {
+            font-size: 18px;
+            line-height: 1.6;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        .section-header {
+            text-align: center;
+            font-size: 48px;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px #000000;
+            margin: 60px 0 40px 0;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+        }
+
+        .project-container {
+            display: flex;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.6);
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 1200px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .project-container:hover {
+            color: #ce86fa;
+            text-shadow: 0 0 8px #ce86fa;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(206, 134, 250, 0.3);
+        }
+
+        .project-image {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 30px;
+            flex-shrink: 0;
+        }
+
+        .project-description {
+            flex: 1;
+        }
+
+        .project-description h2 {
+            font-size: 24px;
+            margin: 0 0 15px 0;
+            font-weight: bold;
+        }
+
+        .project-description p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        section {
+            padding: 40px 20px;
+        }
+
+        /* Mobile-first responsive design */
+        @media (max-width: 480px) {
+            .navbar {
+                padding: 15px 0;
+            }
+
+            .navbar a {
+                font-size: 16px;
+                padding: 8px 10px;
+                margin: 0 2px;
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .parallax {
+                background-attachment: scroll; /* Fix for mobile parallax issues */
+                min-height: 60vh;
+            }
+
+            .content {
+                padding: 20px 15px;
+            }
+
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 15px;
+                margin: 20px 10px;
+            }
+
+            .profile-pic {
+                margin-right: 0;
+                margin-bottom: 20px;
+                max-width: 200px;
+            }
+
+            .text-container h1 {
+                font-size: 28px;
+                line-height: 1.2;
+            }
+
+            .intro-text {
+                font-size: 16px;
+                text-align: left;
+            }
+
+            .section-header {
+                font-size: 28px;
+                padding: 15px;
+                margin: 30px 10px 20px 10px;
+            }
+
+            .project-container {
+                flex-direction: column;
+                text-align: center;
+                margin: 20px 10px;
+                padding: 20px 15px;
+            }
+
+            .project-image {
+                margin-right: 0;
+                margin-bottom: 15px;
+                width: 100%;
+                max-width: 250px;
+                height: 120px;
+            }
+
+            .project-description h2 {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            .project-description p {
+                font-size: 14px;
+                text-align: left;
+            }
+        }
+
+        /* Tablet responsive design */
+        @media (min-width: 481px) and (max-width: 768px) {
+            .navbar a {
+                font-size: 18px;
+                padding: 8px 12px;
+                margin: 0 5px;
+            }
+
+            .parallax {
+                background-attachment: scroll; /* Better performance on tablets */
+            }
+
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+                margin: 30px 15px;
+            }
+
+            .profile-pic {
+                margin-right: 0;
+                margin-bottom: 20px;
+                max-width: 250px;
+            }
+
+            .text-container h1 {
+                font-size: 36px;
+            }
+
+            .intro-text {
+                font-size: 17px;
+            }
+
+            .project-container {
+                flex-direction: column;
+                text-align: center;
+                margin: 25px 15px;
+                padding: 25px 20px;
+            }
+
+            .project-image {
+                margin-right: 0;
+                margin-bottom: 20px;
+                width: 100%;
+                max-width: 300px;
+                height: 150px;
+            }
+
+            .section-header {
+                font-size: 36px;
+                padding: 25px;
+                margin: 40px 15px 30px 15px;
+            }
+
+            .project-description p {
+                text-align: left;
+            }
+        }
+
+        /* Large tablet and small desktop */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .profile-container {
+                max-width: 900px;
+                padding: 35px;
+            }
+
+            .project-container {
+                max-width: 900px;
+            }
+
+            .profile-pic {
+                max-width: 280px;
+            }
+
+            .text-container h1 {
+                font-size: 42px;
+            }
+        }
+
+        /* Touch-friendly improvements */
+        .navbar a,
+        .project-container {
+            min-height: 44px; /* Apple's recommended minimum touch target */
+        }
+
+        /* Improved text readability on small screens */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+
+            .line1, .line2, .line3 {
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
 <body>
-    <div class="navbar">
+    <nav class="navbar">
         <a href="#Projects">Projects</a>
         <a href="#Achievements">Achievements</a>
         <a href="https://www.linkedin.com/in/daniel-maslowski-5242a1181/" target="_blank">LinkedIn</a>
         <a href="https://github.com/Danpmas" target="_blank">GitHub</a>
-    </div>    
+    </nav>
+
     <div id="parallax-section1" class="parallax">
         <div class="content">
             <div class="profile-container">
                 <img src="profile.jpeg" alt="Daniel Maslowski" class="profile-pic">
-                    <div class="text-container">
-                        <h3>
-                        <span class="line1">Daniel Maslowski</span> <br>
-                        <span class="line2">Computer Scientist</span> <br>
+                <div class="text-container">
+                    <h1>
+                        <span class="line1">Daniel Maslowski</span><br>
+                        <span class="line2">Computer Scientist</span><br>
                         <span class="line3">Atmospheric Scientist</span>
-                        </h3>
-                        <p1>Welcome to my website! As I seek job opportunities, I am excited about the prospect of contributing to 
-                        real-world tech scenarios and delving into my second career. I am particularly interested in roles that allow me to 
-                        delve into AI and machine learning algorithms, contribute to large-scale data analysis,
-                        and software engineering projects. With a commitment to continuous learning and a keen eye for detail, I am ready to take 
-                        on challenges and add value to any team.
-                        </p1>
-                    </div>
+                    </h1>
+                    <p class="intro-text">
+                        Welcome to my website! As dual degree candidate with experience communicating data from both forecasting on live television and conducting data 
+                        analysis for two national research campaigns, I bring a unique and fresh perspective to the field of computer science. My focused interests 
+                        lie in data analysis, quality analytics, IT, and atmospheric sciences. Leveraging my dual-degree knowledge and academic work, I 
+                        am eager to apply my skills while continuously expanding my knowledge and growth in the process.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-        <section id="Projects">
-        <miniheader>
-            <h1>Projects</h1>
-        </miniheader>
+
+    <section id="Projects">
         <div id="parallax-section2" class="parallax">
-            <br>
             <div class="content">
+                <h1 class="section-header">Projects</h1>
 
-                <a href="https://www.eol.ucar.edu/field_projects/caesar" target="_blank">
-                    <div class="image-description-container">
-                        <img src="CAESAR_logo.png" alt="New Image Description" class="profile-image">
-                        <div class="image-description">
+                <a href="https://www.eol.ucar.edu/field_projects/caesar" target="_blank" class="project-container">
+                    <img src="CAESAR_logo.png" alt="CAESAR Research Campaign" class="project-image">
+                    <div class="project-description">
                         <h2>CAESAR Model Comparison and Data Analysis</h2>
-                            <p> Data analysis internship over the summer of 2024, consisting of several python programs built to parse and visualize netCDF data collected by the NSF/NCAR C-130 aircraft. 
-                                This aircraft was deployed during cold-air outbreak (CAO) events over the open waters between northern Sweden and the Arctic ice edge in early 2024. 
-                                The data visualizations were compared to simulation runs of the Weather Research and Forecasting (WRF) Model.
-                            </p>      
-                        </div>
+                        <p>Developed python programs to extract and plot dropsonde data, improving data quality and efficiency in analysis and visualizations. 
+                            Conducted and analyzed Weather Research and Forecasting (WRF) model simulations, identifying model bias and weaknesses to adjust parameterization schemes for future forecasting.
+                        </p>
                     </div>
                 </a>
-
-                <a href="https://github.com/Paul-Austin-Oswego-CSC480-HCI521/OZ-CSC-480-HCI-521-Fall-2024" target="_blank">
-                    <div class="image-description-container">
-                        <img src="p12.png" alt="New Image Description" class="profile-image">
-                        <div class="image-description">
-                        <h2>CheckMate App</h2>
-                            <p>Software Design Course class project to create a To-Do list application. CheckMate is a streamlined checklist application for desktop use, accessible via web browser. 
-                                Designed for daily use, it helps users efficiently organize and track tasks in a distraction-free environment. With a simple interface, CheckMate allows for quick 
-                                task entry and prioritization, enhancing productivity without unnecessary features.
-                            </p>      
-                        </div>
-                    </div>
-                </a>
-
-                <a href="https://github.com/Danpmas/Gravity_Waves_Analysis_Tool/blob/main/Readme.md" target="_blank">
-                    <div class="image-description-container">
-                        <img src="p11.png" alt="New Image Description" class="profile-image">
-                        <div class="image-description">
+        
+                <a href="https://github.com/Danpmas/Gravity_Waves_Analysis_Tool/blob/main/Readme.md" target="_blank" class="project-container">
+                        <img src="p11.png" alt="NASA's NEBP Research Campaign" class="project-image">
+                        <div class="project-description">
                         <h2>Gravity Waves Analysis Tool</h2>
-                            <p>Software Engineering Course project to create an easy-to-use web tool that parses GDL code and generates certain atmospheric gravity wave data for NASA's Nationwide Eclipse
-                                Ballooning Project (NEBP). The software allows the user to input radiosonde data and output certain pre-defined gravity wave data representations.
+                            <p>Collaborated with stakeholders from NASA’s Goddard Space Flight Center and SUNY Oswego to design a web-based software application for atmospheric gravity wave analysis during the 2024 total solar eclipse.
+                                Developed and implemented a user-friendly application that wraps legacy IDL code to automate analysis of radiosonde data collected from high-altitude weather balloons.            
                             </p>      
                         </div>
+                </a>
+                
+                <a href="https://github.com/Danpmas/Dijkstra-Algorithm-for-Wikipedia-Pages" target="_blank" class="project-container">
+                    <img src="p3.png" alt="Dijkstra Algorithm Project" class="project-image">
+                    <div class="project-description">
+                        <h2>Dijkstra's Algorithm for Wikipedia Pages</h2>
+                        <p>Weighted, directed graph of over 1000 wikipedia pages with a similarity metric as the cost. Dijkstra's algorithm is applied to find the shortest path between websites.</p>
                     </div>
+                </a>
+                
+                <a href="https://github.com/Danpmas/Turing-Machine-Simulator" target="_blank" class="project-container">
+                    <img src="p4.png" alt="Turing Machine Simulator" class="project-image">
+                    <div class="project-description">
+                        <h2>Turing Machine Simulator</h2>
+                        <p>A one-way, infinite to the right Turing Machine which runs for any input file in this format, with any number of states.</p>
+                    </div>
+                </a>
+                        
+                <a href="https://github.com/Danpmas/KMeans-Clustering-of-Wikipedia-Pages" target="_blank" class="project-container">
+                    <img src="p7.png" alt="KMeans Clustering Project" class="project-image">
+                    <div class="project-description">
+                        <h2>KMeans Clustering of Websites</h2>
+                        <p>Sort and persistently store over 200 Wikipedia pages into clusters of similar websites using KMeans clustering.</p>
+                    </div>
+                </a>
+        
+                <a href="https://github.com/Danpmas/Caesar-Cipher-Messaging" target="_blank" class="project-container">
+                    <img src="p6.png" alt="Caesar Cipher Project" class="project-image">
+                    <div class="project-description">
+                        <h2>Caesar Cipher Messaging</h2>
+                        <p>A program that can encode and decode messages, convert numbers to unary form, and reverse messages.</p>
+                    </div>
+                </a>
+                         
+                <a href="https://github.com/Danpmas/Social-Distancing-Simulator" target="_blank" class="project-container">
+                    <img src="p5.png" alt="Social Distancing Simulator" class="project-image">
+                    <div class="project-description">
+                        <h2>Social Distancing Simulator</h2>
+                        <p>A "social distancing" environment on a two dimensional grid that finds a path through the grid while constantly maintaining a 
+                             6 square distance from preselected points.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="Achievements">
+        <div id="parallax-section3" class="parallax">
+            <div class="content">
+                <h1 class="section-header">Achievements</h1>
+            
+                <a href="https://github.com/Danpmas/Vital_Sense" target="_blank" class="project-container">
+                        <img src="p10.png" alt="Research Presentation Award" class="project-image">
+                        <div class="project-description">
+                            <h2>Research Presentation Award</h2>
+                            <p>First place winner for SUNY Oswego's 2024 Quest Presentation in the Computer 
+                            Science Department. Quest is an annual symposium dedicated to sharing the scholarly and 
+                            creative pursuits of students, faculty, and staff with presentations, talks, competitions, 
+                            panels, posters, readings, and demonstrations. An outstanding presentation is chosen from each department.</p>
+                        </div>
                 </a>
 
-                <a href="https://github.com/Danpmas/Dijkstra-Algorithm-for-Wikipedia-Pages" target="_blank">
-                <div class="image-description-container">
-                    <img src="p3.png" alt="New Image Description" class="profile-image">
-                    <div class="image-description">
-                    <h2>Dijsktra's Algorithm for Wikipedia Pages</h2>
-                        <p>Data Structures and Algorithms Course project in the langauge <i>Java</i> to create a weighted, directed graph of over 1000 websites with a similarity metric 
-                            as the cost. Djikstra's algorithm is applied to find the shortest path between websites.
-                        </p>      
-                    </div>
-                </div>
-            </a>
-            
-            <a href="https://github.com/Danpmas/Turing-Machine-Simulator" target="_blank">
-        <div class="image-description-container">
-            <img src="p4.png" alt="New Image Description" class="profile-image">
-                <div class="image-description">
-                    <h2>Turing Machine Simulator</h2>
-                    <p>Programming Languages Course project to implement a one-way, infinite to the right Turing Machine in the language <i>C</i>.
-                        The program runs for any input file which represents a Turing Machine in this format, with any number of states.
-                    </p>
-                </div>
-        </div>
-        </a>
-                    
-                    <a href="https://github.com/Danpmas/KMeans-Clustering-of-Wikipedia-Pages" target="_blank">
-                    <div class="image-description-container">
-                        <img src="p7.png" alt="New Image Description" class="profile-image">
-                            <div class="image-description">
-                                <h2>KMeans Clustering of Websites</h2>
-                                <p>Data Structures and Algorithms Course project in the langauge <i>Java</i> to sort and persistently store over 200 Wikipedia pages into clusters of 
-                                    similar websites using KMeans clustering.
-                                </p>
-                            </div>
+                <a href="https://www.oswego.edu/news/story/winning-launch-it-idea-will-support-severe-weather-awareness" target="_blank" class="project-container">
+                    <img src="p8.png" alt="LaunchIt Competition Winner" class="project-image">
+                    <div class="project-description">
+                        <h2>2020 LaunchIt Competition Winner</h2>
+                        <p>First place winner for SUNY Oswego's 2020 LaunchIt Business Startup Competition with the pitch for a weather app called SWTRS.
+                        SWTRS is an acronym that stands for Severe Weather Threat Ranking System and provides critical severe weather data for individual users,
+                        users interested in real estate, insurance companies, and commercial markets.</p>
                     </div>
                 </a>
-        <div class="content">
-            <a href="https://github.com/Danpmas/Caesar-Cipher-Messaging" target="_blank">
-            <div class="image-description-container">
-                <img src="p6.png" alt="New Image Description" class="profile-image">
-                <div class="image-description">
-                <h2>Caesar Cipher Messaging</h2>
-                    <p>System's Programming project in the langauge <i>C</i> to create a program that can encode and decode messages, convert numbers to unary form, and 
-                        reverse messages.
-                    </p>
-                </div>
-            </div>
-        </a>
-                 
-                <a href="https://github.com/Danpmas/Social-Distancing-Simulator" target="_blank">
-                <div class="image-description-container">
-                      <img src="p5.png" alt="New Image Description" class="profile-image">
-                           <div class="image-description">
-                            <h2>Social Distancing Simulator</h2>
-                             <p>Programming Languages Course project in the language <i>Answer Set Programming</i> that creates a "social distancing"
-                                 environment on a two dimensional grid. The program finds a path through the grid while constantly maintaining a 
-                                 6 square distance from preselected points on the grid.
-                                </p>
-                            </div>
+            
+                <a href="https://www.oswego.edu/news/spotlight/daniel-maslowski" target="_blank" class="project-container">
+                    <img src="p9.png" alt="SUNY Oswego Spotlight" class="project-image">
+                    <div class="project-description">
+                        <h2>SUNY Oswego Spotlight</h2>
+                        <p>In recognition of academic achievements and contributions to the school community, honored in SUNY Oswego's 2021 Spotlight series. 
+                        This feature celebrates students who go above and beyond in their dedication to learning and community engagement.</p>
                     </div>
-                </div>
+                </a>
             </div>
-        </a>
+        </div>
     </section>
-    <section id="Achievements">
-        <miniheader>
-            <h1>Achievements</h1>
-        </miniheader>
-        <a href="https://github.com/Danpmas/Vital_Sense" target="_blank">
-            <div class="image-description-container">
-                <img src="p10.png" alt="New Image Description" class="profile-image">
-                <div class="image-description">
-                <h2>Computer Science Department Quest Presentation Winner</h2>
-                    <p>First place winner for SUNY Oswego's 2024 Quest Presentation in the Computer 
-                        Science Department. Quest is an annual symposium dedicated to sharing the scholarly and 
-                        creative pursuits of students, faculty, and staff with presentations, talks, competitions, 
-                        panels, posters, readings, and demonstrations. An outstanding presentation is chosen from each department.
-                    </p>
-                </div>
-            </div>
-        </a>
-        <a href="https://www.oswego.edu/news/story/winning-launch-it-idea-will-support-severe-weather-awareness" target="_blank">
-            <div class="image-description-container">
-                <img src="p8.png" alt="New Image Description" class="profile-image">
-                <div class="image-description">
-                <h2>2020 LaunchIt Competition Winner</h2>
-                    <p>First place winner for SUNY Oswego's 2020 LaunchIt Business Startup Competition with the pitch for a weather app called SWTRS.
-                        SWTRS is an acronym that stands for Severe Weather Threat Ranking System and provides critical severe weather data for individual users,
-                        users interested in real estate, insurance companies, and commercial markets.
-                    </p>
-                </div>
-            </div>
-        </a>
-        <a href="https://www.oswego.edu/news/spotlight/daniel-maslowski" target="_blank">
-            <div class="image-description-container">
-                <img src="p9.png" alt="New Image Description" class="profile-image">
-                <div class="image-description">
-                <h2>SUNY Oswego Spotlight</h2>
-                    <p>In recognition of academic achievements and contributions to the school community, honored in SUNY Oswego's 2021 Spotlight series. 
-                        This feature celebrates students who go above and beyond in their dedication to learning and community engagement.
-                    </p>
-                </div>
-            </div>
-        </a>
-    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
