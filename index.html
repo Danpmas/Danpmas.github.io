@@ -12,6 +12,7 @@
             font-family: Arial, sans-serif;
             background: #0f0f23;
             color: white;
+            padding-top: 100px; /* Add padding to account for fixed navbar */
         }
 
         .parallax {
@@ -35,14 +36,17 @@
         }
 
         .navbar {
-            position: sticky;
+            position: fixed;
             top: 0;
+            left: 0;
+            right: 0;
             width: 100%;
-            background-color: rgba(66, 177, 195, 0.7);
+            background-color: rgba(66, 177, 195, 0.9);
             z-index: 1000;
             padding: 20px 0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             text-align: center;
+            backdrop-filter: blur(10px);
         }
 
         .navbar a {
@@ -179,16 +183,20 @@
 
         /* Mobile-first responsive design */
         @media (max-width: 480px) {
+            body {
+                padding-top: 120px; /* Increase padding for mobile navbar */
+            }
+
             .navbar {
-                padding: 15px 0;
+                padding: 10px 0;
+                background-color: rgba(66, 177, 195, 0.95);
             }
 
             .navbar a {
-                font-size: 16px;
-                padding: 8px 10px;
+                font-size: 14px;
+                padding: 8px 6px;
                 margin: 0 2px;
-                display: block;
-                margin-bottom: 5px;
+                display: inline-block;
             }
 
             .parallax {
@@ -257,6 +265,14 @@
 
         /* Tablet responsive design */
         @media (min-width: 481px) and (max-width: 768px) {
+            body {
+                padding-top: 110px; /* Adjust padding for tablet navbar */
+            }
+
+            .navbar {
+                padding: 15px 0;
+            }
+
             .navbar a {
                 font-size: 18px;
                 padding: 8px 12px;
@@ -356,28 +372,31 @@
 </head>
 <body>
     <nav class="navbar">
+        <a href="#home">Home</a> 
         <a href="#Projects">Projects</a>
         <a href="#Achievements">Achievements</a>
         <a href="https://www.linkedin.com/in/daniel-maslowski-5242a1181/" target="_blank">LinkedIn</a>
         <a href="https://github.com/Danpmas" target="_blank">GitHub</a>
     </nav>
 
-    <div id="parallax-section1" class="parallax">
-        <div class="content">
-            <div class="profile-container">
-                <img src="profile.jpeg" alt="Daniel Maslowski" class="profile-pic">
-                <div class="text-container">
-                    <h1>
-                        <span class="line1">Daniel Maslowski</span><br>
-                        <span class="line2">Computer Scientist</span><br>
-                        <span class="line3">Atmospheric Scientist</span>
-                    </h1>
-                    <p class="intro-text">
-                        Welcome to my website! As dual degree candidate with experience communicating data from both forecasting on live television and conducting data 
-                        analysis for two national research campaigns, I bring a unique and fresh perspective to the field of computer science. My focused interests 
-                        lie in data analysis, quality analytics, IT, and atmospheric sciences. Leveraging my dual-degree knowledge and academic work, I 
-                        am eager to apply my skills while continuously expanding my knowledge and growth in the process.
-                    </p>
+    <div id="home" class="parallax" style="padding-top: 0;">
+        <div id="parallax-section1" class="parallax">
+            <div class="content">
+                <div class="profile-container">
+                    <img src="profile.jpeg" alt="Daniel Maslowski" class="profile-pic">
+                    <div class="text-container">
+                        <h1>
+                            <span class="line1">Daniel Maslowski</span><br>
+                            <span class="line2">Computer Scientist</span><br>
+                            <span class="line3">Atmospheric Scientist</span>
+                        </h1>
+                        <p class="intro-text">
+                            Welcome to my website! With dual degrees in Atmospheric Sciences and Computer Science, and experience communicating data both through
+                            live television forecasting and through data analysis for two national research campaigns, I bring a unique and interdisciplinary
+                            perspective to the field of computer science. My focused interests lie in data analysis, quality analytics, IT, and atmospheric sciences. Leveraging my
+                            knowledge and academic work, I am eager to apply my skills while continuously expanding my knowledge and growth in the process.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -402,7 +421,7 @@
                         <img src="p11.png" alt="NASA's NEBP Research Campaign" class="project-image">
                         <div class="project-description">
                         <h2>Gravity Waves Analysis Tool</h2>
-                            <p>Collaborated with stakeholders from NASA’s Goddard Space Flight Center and SUNY Oswego to design a web-based software application for atmospheric gravity wave analysis during the 2024 total solar eclipse.
+                            <p>Collaborated with stakeholders from NASA's Goddard Space Flight Center and SUNY Oswego to design a web-based software application for atmospheric gravity wave analysis during the 2024 total solar eclipse.
                                 Developed and implemented a user-friendly application that wraps legacy IDL code to automate analysis of radiosonde data collected from high-altitude weather balloons.            
                             </p>      
                         </div>
